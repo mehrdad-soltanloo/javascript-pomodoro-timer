@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pomodoro Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sixtyfour+Convergence&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="pomodoro-app">
+      <h1>Pomodoro Timer</h1>
+      <!-- Timer Display -->
+      <div class="timer-container">
+        <svg class="progress-circle" width="200" height="200">
+          <defs>
+            <pattern
+              id="image-pattern"
+              patternUnits="userSpaceOnUse"
+              width="200"
+              height="200"
+            >
+              <image
+                href="pmodoro.png"
+                x="0"
+                y="0"
+                width="200"
+                height="200"
+                transform="rotate(90, 100, 100)"
+              />
+            </pattern>
+          </defs>
+          <circle class="progress-circle-bg" cx="100" cy="100" r="90"></circle>
+          <circle
+            class="progress-circle-fill"
+            cx="100"
+            cy="100"
+            r="90"
+            fill="url(#image-pattern)"
+          ></circle>
+        </svg>
+        <div id="timer-display">25:00</div>
+      </div>
+      <!-- Control Buttons -->
+      <div class="controls">
+        <button id="start-btn" aria-label="Start timer">start</button>
+        <button id="pause-btn" aria-label="Pause timer">pause</button>
+        <button id="reset-btn" aria-label="Reset timer">reset</button>
+      </div>
+      <!-- Adjust the work and break duration -->
+      <div class="settings">
+        <label
+          ><span>Work Duration:</span
+          ><input type="number" id="work-duration" value="25"
+        /></label>
+
+        <label
+          ><span>Break Duration:</span
+          ><input type="number" id="break-duration" value="5"
+        /></label>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

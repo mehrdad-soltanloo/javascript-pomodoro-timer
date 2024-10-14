@@ -1,0 +1,8 @@
+# Force GitHub to recognize .js files as JavaScript
+*.js linguist-language=JavaScript
+
+# Ignore CSS files from language statistics
+*.css linguist-detectable=false
+
+# You can add more file types as necessary
+*.html linguist-language=false
