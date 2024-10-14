@@ -205,6 +205,4 @@ This Pomodoro Timer project demonstrates how to use JavaScript to create interac
 
 > Feel free to build upon this foundation by adding new features like notifications, sound alerts, or even a task list for better productivity tracking. Thank you!
 
-```
 
-```
